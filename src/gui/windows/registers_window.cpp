@@ -248,19 +248,19 @@ namespace zero_mate::gui
                 Render_Raw_Value(cpu_context.Get_Register(i, mode), format);
             }
 
-            // Render register R13 (LR).
+            // Render register R13 (SP).
             ImGui::TableNextRow();
             ImGui::TableNextColumn();
-            ImGui::Text("R13 (LR)");
-            ImGui::TableNextColumn();
-            Render_Raw_Value(cpu_context.Get_Register(arm1176jzf_s::CCPU_Context::LR_Reg_Idx, mode), format);
-            ImGui::TableNextRow();
-
-            // Render register R14 (SP).
-            ImGui::TableNextColumn();
-            ImGui::Text("R14 (SP)");
+            ImGui::Text("R13 (SP)");
             ImGui::TableNextColumn();
             Render_Raw_Value(cpu_context.Get_Register(arm1176jzf_s::CCPU_Context::SP_Reg_Idx, mode), format);
+            ImGui::TableNextRow();
+
+            // Render register R14 (LR).
+            ImGui::TableNextColumn();
+            ImGui::Text("R14 (LR)");
+            ImGui::TableNextColumn();
+            Render_Raw_Value(cpu_context.Get_Register(arm1176jzf_s::CCPU_Context::LR_Reg_Idx, mode), format);
             ImGui::TableNextRow();
 
             // Render register R15 (PC).
